@@ -21,6 +21,7 @@ yarn-error.log
 /.vscode
 
 # Hosting artifacts (not part of the app)
+*.focusrent.cm
 /subdomains
 /cgi-bin
 /.well-known
