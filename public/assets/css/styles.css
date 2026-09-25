@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #0A0413;
+  color: #F9F9F9;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #7D30FA 0%, #FC912C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #7D30FA 0%, #FC912C 100%);
+  color: white;
+  transition: filter 0.2s;
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.15);
+}
+
+.why-icon {
+  position: relative;
+  border: 2px solid transparent;
+  background: #000;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  font-size: 2rem;
+}
+
+.why-icon::before {
+  position: absolute;
+  content: '';
+  top: -4px;
+  left: -4px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  z-index: -1;
+  background: linear-gradient(120deg, #fc912c 0, #7d30fa 100%);
+}
+
+.feature-icon {
+  background: linear-gradient(120deg, #fc912c 0, #7d30fa 100%);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  width: 56px;
+  height: 56px;
+  font-size: 2rem;
+}
+
+.price-card {
+  border: 2px solid transparent;
+  background: linear-gradient(to bottom right, rgba(125, 48, 250, 0.12) 0%, rgba(252, 145, 44, 0.13) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px 0 rgba(24, 0, 44, 0.07);
+  transition: border 0.25s;
+}
+
+.price-card.selected,
+.price-card:hover {
+  border-image: linear-gradient(90deg, #fc912c, #7d30fa) 1;
+  border-radius: 1rem;
+}
+
+.testimonial {
+  background: rgba(34, 20, 56, 0.75);
+  border-radius: 0.75rem;
+}
+
+.faq-answer {
+  background-color: rgba(252, 145, 44, 0.07);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
