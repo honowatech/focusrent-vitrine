@@ -6,8 +6,10 @@
     DirectoryIndex public/index.php index.php
     RewriteEngine On
     
-    RewriteCond %{HTTPS} off 
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # Un seul hote canonique : https://focusrent.cm (http et www redirigent en 301)
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} ^www\.focusrent\.cm$ [NC]
+    RewriteRule ^(.*)$ https://focusrent.cm%{REQUEST_URI} [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
