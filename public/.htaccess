@@ -30,6 +30,13 @@
 
     RewriteEngine On
 
+    # Chemins internes demandes de l'exterieur (/public/..., /site/..., /index.php/...) : 301 vers
+    # l'adresse publique ; sinon Laravel sert une copie du site dont tous les liens portent ce
+    # prefixe. THE_REQUEST = ligne de requete d'origine : quand la racine du domaine est
+    # public_html, %{REQUEST_URI} vaut ici le chemin reecrit par le .htaccess racine.
+    RewriteCond %{THE_REQUEST} ^[A-Z]+\s/+(?:(?:public|site)(?:/+index\.php)?|index\.php)(?=[/?\s])(/[^?\s]*)? [NC]
+    RewriteRule ^ https://%{HTTP_HOST}%1 [L,R=301,NE]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
