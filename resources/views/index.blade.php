@@ -9,7 +9,7 @@
             <p class="w-full min-w-0 max-w-2xl text-xl mb-6 text-gray-400">
                 {{ __('home.hero.subtitle') }}
             </p>
-            <a href="https://apps.focusrent.cm/register" target="_blank" rel="noopener noreferrer"
+            <a href="https://location.focusrent.cm/register" target="_blank" rel="noopener noreferrer"
                 class="btn-gradient px-8 py-3 rounded-full font-bold text-xl shadow-lg inline-block mb-2">{{ __('home.hero.cta') }}</a>
         </div>
     </section>

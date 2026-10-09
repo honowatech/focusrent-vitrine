@@ -4,7 +4,7 @@ return [
     'llms' => [
         'title' => 'Focus Rent',
         'tagline' => 'Rental-management software for landlords and real-estate agencies in Africa, starting with Cameroon. Built by Honowa Technologies in Douala.',
-        'summary' => 'Focus Rent automates leases, rent collection (MTN and Orange Mobile Money), reminders, tenant SMS, maintenance and dashboards. Public site: focusrent.cm. Demo: https://demomeuble.focusrent.cm. Site languages: French (default, no URL prefix) and English (/en).',
+        'summary' => 'Focus Rent automates leases, rent collection (MTN and Orange Mobile Money), reminders, tenant SMS, maintenance and dashboards. Public site: focusrent.cm. Demo: https://location.focusrent.cm/demo. Site languages: French (default, no URL prefix) and English (/en).',
         'pages_heading' => 'Pages',
         'languages_heading' => 'Languages (agent briefings)',
         'agent_heading' => 'For AI agents',
@@ -32,7 +32,7 @@ return [
             'Email: contact@focusrent.cm',
             'Phone / WhatsApp: +237 674 97 08 06',
             'Address: Douala, Cameroon',
-            'Demo: https://demomeuble.focusrent.cm',
+            'Demo: https://location.focusrent.cm/demo',
             'Publisher: Honowa Technologies (https://honowa.com/home)',
         ],
         'company_heading' => 'Company',

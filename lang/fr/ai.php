@@ -4,7 +4,7 @@ return [
     'llms' => [
         'title' => 'Focus Rent',
         'tagline' => 'Logiciel de gestion locative pour propriétaires et agences immobilières en Afrique, à commencer par le Cameroun. Édité par Honowa Technologies à Douala.',
-        'summary' => 'Focus Rent automatise les baux, la collecte des loyers (Mobile Money MTN et Orange), les relances, les SMS locataires, la maintenance et les tableaux de bord. Site public : focusrent.cm. Démo : https://demomeuble.focusrent.cm. Langues du site : français (défaut, sans préfixe d’URL) et anglais (/en).',
+        'summary' => 'Focus Rent automatise les baux, la collecte des loyers (Mobile Money MTN et Orange), les relances, les SMS locataires, la maintenance et les tableaux de bord. Site public : focusrent.cm. Démo : https://location.focusrent.cm/demo. Langues du site : français (défaut, sans préfixe d’URL) et anglais (/en).',
         'pages_heading' => 'Pages',
         'languages_heading' => 'Langues (briefings agents)',
         'agent_heading' => 'Pour les agents IA',
@@ -32,7 +32,7 @@ return [
             'E-mail : contact@focusrent.cm',
             'Téléphone / WhatsApp : +237 674 97 08 06',
             'Adresse : Douala, Cameroun',
-            'Démo : https://demomeuble.focusrent.cm',
+            'Démo : https://location.focusrent.cm/demo',
             'Éditeur : Honowa Technologies (https://honowa.com/home)',
         ],
         'company_heading' => 'Entreprise',

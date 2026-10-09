@@ -127,7 +127,7 @@ class SeoController extends Controller
         $add('');
         $add('- ['.__('ai.llms.full_label').']('.locale_route('llms-full').')');
         $add('- ['.__('ai.llms.contact_label').']('.locale_route('contact').')');
-        $add('- Demo: https://demomeuble.focusrent.cm');
+        $add('- Demo: https://location.focusrent.cm/demo');
 
         if (! $full) {
             $add('');

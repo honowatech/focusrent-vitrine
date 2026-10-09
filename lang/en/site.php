@@ -30,7 +30,7 @@ return [
         'social_twitter' => 'Twitter account',
         'social_linkedin' => 'LinkedIn page',
     ],
-    'demo_url' => 'https://demomeuble.focusrent.cm',
+    'demo_url' => 'https://location.focusrent.cm/demo',
     'maintenance' => [
         'badge' => 'Back very soon',
         'title' => 'Site under maintenance',
