@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
     @foreach (__('home.pricing.plans') as $plan)
-    <article id="{{ strtolower($plan['name']) }}" class="price-card flex flex-col items-center p-8 {{ $loop->first ? 'selected' : '' }}">
+    <article id="{{ strtolower($plan['name']) }}" class="price-card scroll-mt-24 flex flex-col items-center p-8 {{ $loop->first ? 'selected' : '' }}">
         <h3 class="text-2xl font-bold gradient-text mb-2">{{ $plan['name'] }}</h3>
         <p class="mb-6 text-center">
             <span class="whitespace-nowrap text-3xl font-extrabold gradient-text lg:text-4xl">{{ $plan['price'] }}</span>

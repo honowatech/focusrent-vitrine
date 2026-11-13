@@ -59,7 +59,7 @@ class RecordPageView
         }
 
         $agent = (string) $request->userAgent();
-        if ($agent !== '' && preg_match('/bot|crawl|spider|slurp|preview|facebookexternalhit|whatsapp|telegram/i', $agent)) {
+        if ($agent !== '' && \App\Support\Visitor::isBot($agent)) {
             return false;
         }
 

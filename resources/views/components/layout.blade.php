@@ -1,4 +1,4 @@
-@props(['title' => null, 'description' => null])
+@props(['title' => null, 'description' => null, 'robots' => 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'])
 @php
     use App\Support\Locales;
     use App\Support\Seo;
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ $title }}</title>
   <meta name="description" content="{{ $description }}">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="robots" content="{{ $robots }}">
   <meta name="author" content="Honowa Technologies">
   <meta name="geo.region" content="CM">
   <meta name="geo.placename" content="Douala">

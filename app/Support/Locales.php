@@ -53,6 +53,14 @@ class Locales
         return (array) config('locales.pages', []);
     }
 
+    public static function searchSlug(?string $locale = null): string
+    {
+        $locale ??= app()->getLocale();
+        $slugs = (array) config('locales.search', []);
+
+        return $slugs[$locale] ?? $slugs[self::default()] ?? 'search';
+    }
+
     public static function currentPage(): string
     {
         $name = Route::currentRouteName() ?: 'index';
@@ -91,6 +99,17 @@ class Locales
     {
         $page = self::currentPage();
 
+        if ($page === 'search') {
+            $q = request()->query('q');
+            $type = request()->query('type');
+            $query = array_filter([
+                'q' => is_string($q) ? mb_substr(trim($q), 0, (int) config('search.max_chars', 80)) : null,
+                'type' => is_string($type) && in_array($type, (array) config('search.groups', []), true) ? $type : null,
+            ], fn ($value) => is_string($value) && $value !== '');
+
+            return self::route('search', $query, $locale);
+        }
+
         if (! array_key_exists($page, self::pages()) && ! in_array($page, ['llms', 'llms-full'], true)) {
             $page = 'index';
         }
@@ -119,7 +138,9 @@ class Locales
 
     public static function pathFor(string $page, string $locale): string
     {
-        $path = self::pages()[$page] ?? '/';
+        $path = $page === 'search'
+            ? '/'.self::searchSlug($locale)
+            : (self::pages()[$page] ?? '/');
         $path = '/'.ltrim($path, '/');
 
         if ($path === '/') {

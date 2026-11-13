@@ -1,3 +1,5 @@
+import './search';
+
 document.getElementById('menu-toggler')?.addEventListener('click', () => {
     const spans = document.querySelectorAll('#menu-toggler span');
     spans[0]?.classList.toggle('rotate-45');

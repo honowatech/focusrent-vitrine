@@ -25,6 +25,7 @@
             </div>
             <nav class="hidden flex-wrap items-center gap-4 text-sm font-semibold md:flex" aria-label="Back-office">
                 <a href="{{ route('admin.visits') }}" class="{{ request()->routeIs('admin.visits') ? 'text-[#FC912C]' : 'hover:text-white' }}">Visites</a>
+                <a href="{{ route('admin.searches') }}" class="{{ request()->routeIs('admin.searches') ? 'text-[#FC912C]' : 'hover:text-white' }}">Recherches</a>
                 <a href="{{ route('admin.messages') }}" class="{{ request()->routeIs('admin.messages', 'admin.messages.show') ? 'text-[#FC912C]' : 'hover:text-white' }}">
                     Messages
                     @if ($unreadMessages > 0)
@@ -50,8 +51,9 @@
         @endif
         {{ $slot }}
     </main>
-    <nav class="fixed inset-x-0 bottom-0 z-30 grid grid-cols-4 border-t border-gray-800 bg-black md:hidden" style="padding-bottom: env(safe-area-inset-bottom)" aria-label="Application">
+    <nav class="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-gray-800 bg-black md:hidden" style="padding-bottom: env(safe-area-inset-bottom)" aria-label="Application">
         <a href="{{ route('admin.visits') }}" class="px-2 py-4 text-center text-sm font-semibold {{ request()->routeIs('admin.visits') ? 'text-[#FC912C]' : 'text-gray-300' }}">Visites</a>
+        <a href="{{ route('admin.searches') }}" class="px-2 py-4 text-center text-sm font-semibold {{ request()->routeIs('admin.searches') ? 'text-[#FC912C]' : 'text-gray-300' }}">Recherches</a>
         <a href="{{ route('admin.messages') }}" class="px-2 py-4 text-center text-sm font-semibold {{ request()->routeIs('admin.messages', 'admin.messages.show') ? 'text-[#FC912C]' : 'text-gray-300' }}">
             Messages
             @if ($unreadMessages > 0)

@@ -10,6 +10,7 @@ return [
         'faq' => 'FAQ',
         'demo' => 'Demo',
         'contact' => 'Contact',
+        'search' => 'Search',
         'menu' => 'Open menu',
         'language' => 'Language',
     ],

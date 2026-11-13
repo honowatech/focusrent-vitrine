@@ -18,7 +18,7 @@
             @endif
 
             @foreach (__($file.'.sections') as $section)
-                <section>
+                <section id="section-{{ $loop->iteration }}" class="scroll-mt-24">
                     <h2 class="text-2xl font-bold mb-4 gradient-text">{{ $section['title'] }}</h2>
                     @foreach ($section['blocks'] as $block)
                         @if (($block['type'] ?? 'p') === 'h3')

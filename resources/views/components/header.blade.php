@@ -30,10 +30,17 @@
                 {{ $link['label'] }}
             </a>
         @endforeach
+        <a href="{{ locale_route('search') }}" class="search-trigger" data-search-open aria-label="{{ __('search.open_hint') }}" title="{{ __('search.open_hint') }}">
+            <x-icon name="search" />
+            <kbd aria-hidden="true" data-search-kbd>Ctrl K</kbd>
+        </a>
         <x-language-switcher />
     </nav>
 
     <div class="flex shrink-0 items-center gap-3 md:hidden">
+        <a href="{{ locale_route('search') }}" class="search-trigger search-trigger-mobile" data-search-open aria-label="{{ __('search.open') }}">
+            <x-icon name="search" />
+        </a>
         <x-language-switcher />
         <button type="button" aria-label="{{ __('site.nav.menu') }}" id="menu-toggler"
             class="flex flex-col items-stretch text-center justify-between gap-1.5 rounded-md cursor-pointer">
@@ -43,6 +50,10 @@
         </button>
         <div id="mobile-menu" class="hidden fixed inset-x-0 top-[3.71rem] bottom-0 z-30 bg-black py-2">
             <nav class="flex flex-col items-stretch text-center h-full space-y-2 text-lg px-2 pt-4">
+                <a href="{{ locale_route('search') }}" class="search-drawer-field" data-search-open>
+                    <x-icon name="search" />
+                    <span>{{ __('search.placeholder') }}</span>
+                </a>
                 @foreach ($links as $link)
                     <a href="{{ $link['href'] }}"
                         @if(!empty($link['target'])) target="{{ $link['target'] }}" rel="noopener noreferrer" @endif
@@ -53,3 +64,5 @@
         </div>
     </div>
 </header>
+
+@include('partials.search')
