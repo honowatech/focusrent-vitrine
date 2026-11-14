@@ -32,7 +32,7 @@
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 gradient-text">{{ __('home.features.title') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-6xl mx-auto">
             @foreach (__('home.features.items') as $item)
-            <div class="flex flex-col items-center text-center space-y-2">
+            <div id="feature-{{ $item['icon'] }}" class="flex flex-col items-center text-center space-y-2 scroll-mt-24">
                 <span class="feature-icon"><x-icon :name="$item['icon']" /></span>
                 <h3 class="font-semibold text-lg">{{ $item['title'] }}</h3>
                 <p>{{ $item['text'] }}</p>
@@ -45,7 +45,7 @@
         </div>
     </section>
 
-    <section class="py-14 px-4 md:px-24 bg-[#1D142B] flex flex-col items-center justify-between">
+    <section id="galerie" class="py-14 px-4 md:px-24 bg-[#1D142B] flex flex-col items-center justify-between">
         <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-8 text-center">{{ __('home.gallery.title') }}</h2>
         <div class="w-full max-w-2xl px-2 basis-2xl">
             <div class="relative overflow-hidden h-full">

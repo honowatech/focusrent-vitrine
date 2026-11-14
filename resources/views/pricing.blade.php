@@ -10,7 +10,7 @@
             </ol>
         </nav>
 
-        <section class="mx-auto max-w-6xl px-4 py-10 md:px-24">
+        <section id="intro" class="mx-auto max-w-6xl px-4 py-10 md:px-24">
             <h1 class="mb-6 text-center text-3xl font-bold gradient-text md:text-5xl">{{ __('pricing.title') }}</h1>
             <p class="mx-auto max-w-3xl text-center text-lg text-gray-200">{{ __('pricing.lead') }}</p>
         </section>
@@ -89,7 +89,7 @@
             <h2 id="pricing-faq-title" class="mb-10 text-center text-3xl font-bold gradient-text">{{ __('pricing.faq_title') }}</h2>
             <div class="mx-auto max-w-3xl space-y-6">
                 @foreach (__('pricing.faq') as $item)
-                <article>
+                <article id="faq-{{ $loop->iteration }}" class="scroll-mt-24">
                     <h3 class="flex items-center text-lg font-semibold"><x-icon name="question-circle" class="mr-2 text-orange-400" />{{ $item['q'] }}</h3>
                     <div class="faq-answer">{{ $item['a'] }}</div>
                 </article>

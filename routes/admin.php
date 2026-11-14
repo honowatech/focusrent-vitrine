@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\MailSettingController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\PwaController;
+use App\Http\Controllers\Admin\SearchQueryController;
 use App\Http\Controllers\Admin\SiteModeController;
 use App\Http\Controllers\Admin\VisitController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [VisitController::class, 'index'])->name('visits');
+    Route::get('/recherches', [SearchQueryController::class, 'index'])->name('searches');
     Route::get('/messages', [MessageController::class, 'index'])->name('messages');
     Route::get('/messages/{message}', [MessageController::class, 'show'])->name('messages.show');
     Route::get('/mail', [MailSettingController::class, 'edit'])->name('mail');

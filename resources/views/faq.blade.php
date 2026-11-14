@@ -6,7 +6,7 @@
         <h1 class="text-3xl md:text-4xl font-bold text-center mb-10 gradient-text">{{ __('faq.title') }}</h1>
         <div class="max-w-3xl mx-auto space-y-6">
             @foreach (__('faq.items') as $item)
-            <article>
+            <article id="faq-{{ $loop->iteration }}" class="scroll-mt-24">
                 <h2 class="font-semibold flex items-center text-lg"><x-icon name="question-circle" class="mr-2 text-orange-400" />{{ $item['q'] }}</h2>
                 <div class="faq-answer">{{ $item['a'] }}</div>
             </article>

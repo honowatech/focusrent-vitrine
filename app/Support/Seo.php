@@ -8,6 +8,10 @@ class Seo
     {
         $page = Locales::currentPage();
 
+        if ($page === 'search') {
+            return 'search';
+        }
+
         return array_key_exists($page, Locales::pages()) ? $page : 'index';
     }
 
@@ -184,6 +188,7 @@ class Seo
         return match ($page) {
             'about' => 'AboutPage',
             'contact' => 'ContactPage',
+            'search' => 'SearchResultsPage',
             'faq' => 'WebPage',
             'privacy', 'terms' => 'WebPage',
             default => 'WebPage',

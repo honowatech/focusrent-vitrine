@@ -2,7 +2,7 @@
     <x-header />
 
     <main id="main-content">
-    <section class="py-16 bg-focus-light border-b border-gray-200/20">
+    <section id="hero" class="py-16 bg-focus-light border-b border-gray-200/20">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ __('about.hero.title') }}</h1>
@@ -19,7 +19,7 @@
         </div>
     </section>
 
-    <section class="py-16 border-b border-gray-200/20">
+    <section id="parcours" class="py-16 border-b border-gray-200/20">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl font-bold mb-10 text-center">{{ __('about.timeline.title') }}</h2>
@@ -35,7 +35,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-focus-light border-b border-gray-200/20">
+    <section id="mission" class="py-16 bg-focus-light border-b border-gray-200/20">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl font-bold mb-10 text-center">{{ __('about.mission.title') }}</h2>
@@ -57,7 +57,7 @@
         </div>
     </section>
 
-    <section class="py-16 border-b border-gray-200/20">
+    <section id="valeurs" class="py-16 border-b border-gray-200/20">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-12 text-center">{{ __('about.values.title') }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -74,7 +74,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-focus-dark text-white border-b border-gray-200/20">
+    <section id="vision" class="py-16 bg-focus-dark text-white border-b border-gray-200/20">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-6">{{ __('about.vision.title') }}</h2>
@@ -84,7 +84,7 @@
         </div>
     </section>
 
-    <section class="py-16">
+    <section id="demo" class="py-16">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto bg-focus-blue rounded-xl shadow-lg p-8 text-white text-center">
                 <h2 class="text-3xl font-bold mb-4">{{ __('about.cta.title') }}</h2>

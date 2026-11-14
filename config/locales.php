@@ -60,4 +60,19 @@ return [
         'terms' => '/terms',
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Search results page slug per locale
+    |--------------------------------------------------------------------------
+    |
+    | Hors sitemap, hors llms.txt, noindex. La palette (Ctrl+K) mène ici
+    | sans JavaScript et pour les liens partageables.
+    |
+    */
+
+    'search' => [
+        'fr' => 'recherche',
+        'en' => 'search',
+    ],
+
 ];

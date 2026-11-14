@@ -2,8 +2,9 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "predev": "php artisan search:index",
         "dev": "vite",
-        "build": "vite build"
+        "build": "php artisan search:index && vite build"
     },
     "devDependencies": {
         "axios": "^1.6.4",
@@ -12,6 +13,7 @@
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.7",
+        "minisearch": "^7.1.2",
         "tailwindcss": "^4.1.7"
     }
 }

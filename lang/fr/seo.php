@@ -31,6 +31,11 @@ return [
         'title' => 'Politique de confidentialité | Focus Rent',
         'description' => 'Comment Focus Rent collecte, utilise et protège les données des propriétaires, agences et locataires. Vos droits et nos engagements.',
     ],
+    'search' => [
+        'nav' => 'Recherche',
+        'title' => 'Recherche | Focus Rent',
+        'description' => 'Recherchez une fonctionnalité, une formule, une réponse de la FAQ ou une page du site Focus Rent.',
+    ],
     'terms' => [
         'nav' => 'Conditions d’utilisation',
         'title' => 'Conditions générales d’utilisation | Focus Rent',

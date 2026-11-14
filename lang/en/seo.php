@@ -31,6 +31,11 @@ return [
         'title' => 'Privacy policy | Focus Rent',
         'description' => 'How Focus Rent collects, uses and protects data for landlords, agencies and tenants. Your rights and our commitments.',
     ],
+    'search' => [
+        'nav' => 'Search',
+        'title' => 'Search | Focus Rent',
+        'description' => 'Search for a feature, a plan, an FAQ answer or a page of the Focus Rent website.',
+    ],
     'terms' => [
         'nav' => 'Terms of use',
         'title' => 'Terms of use | Focus Rent',
